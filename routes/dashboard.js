@@ -8,10 +8,9 @@ var cursos = require('./cursos');
 var trabalhos = require('./trabalhos');
 
 app.use('/assets',express.static(path.join(__dirname, '../dashboard/assets')));
-app.use('/templates',express.static(path.join(__dirname, '../dashboard/templates/')));
 
 app.get('/',function(req,res,next){
-	res.sendFile(path.join(__dirname, '../dashboard/index.html'));
+	res.sendFile(path.join(__dirname, '../dashboard/index.htm'));
 });
 
 app.use('/sobre',sobre);

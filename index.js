@@ -25,6 +25,8 @@ app.post('/contato',function(req,res,next){
 	});	
 })
 
+app.use('/templates',express.static(__dirname+'/dashboard/templates/'));
+
 app.use('/dashboard',dashboard);
 
-app.listen('3000');
+app.listen('80');

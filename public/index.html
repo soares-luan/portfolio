@@ -122,32 +122,12 @@
 		<!--about me end-->
 		<!--technical start-->
 		<section class="technical" id="technical">
-			<div class="container">
+			<div class="container" id='habilidades'>
 				<div class="heading">
 					<h2>Habilidades técnicas</h2>
 				</div>
-				<div class="row" id='habilidades'>
-					<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 skillsArea">
-
-						<div class=" col-xs-12 col-sm-12 col-md-2 col-lg-2 " v-for='habilidade in habilidades'>
-							<img v-bind:src="'/assets/images/'+habilidade.imagem" v-bind:alt="habilidade.nome">
-						</div>
-						<!-- <div class=" col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-							<img src="/assets/images/mysql.png" alt="">
-						</div>
-						<div class=" col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-							<img src="/assets/images/mongo.png" alt="">
-						</div>
-						<div class=" col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-							<img src="/assets/images/js.png" alt="">
-						</div>
-						<div class=" col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-							<img src="/assets/images/angular.png" alt="">
-						</div>
-						<div class=" col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-							<img src="/assets/images/express.png" alt="">
-						</div> -->
-					</div>
+				<div class=" col-xs-12 col-sm-12 col-md-3 col-lg-3" v-for='habilidade in habilidades'>
+					<img v-bind:src="'/assets/images/'+habilidade.imagem" v-bind:alt="habilidade.nome">
 				</div>
 			</div>
 		</section>
@@ -157,7 +137,6 @@
 			<div class="container" id='atividades'>
 				<div class="heading">
 					<h2>Atividades Profissionais</h2>
-					<p></p>
 				</div>
 
 				<div class="row workDetails" v-for='atividade in atividades'>
@@ -218,7 +197,15 @@
 						<p>Meu últimos trabalhos</p>
 					</div>			
 					<div v-bind:class="'col-xs-12 col-xs-13 col-md-3 col-lg-3 '+ removeHifen(trabalho.tipo)" v-for='trabalho in trabalhos'>
-						<figure class="snip1579"><img v-bind:src="'/assets/images/portfolio/'+trabalho.img" alt="profile-sample2"/>
+						<figure class="snip1579">
+							<picture>
+								<source 
+								media="(max-width: 414px)"
+								v-bind:srcset="'/assets/images/portfolio/celular_'+trabalho.img">
+								<img 
+								v-bind:src="'/assets/images/portfolio/'+trabalho.img"
+								v-bind:alt="trabalho.nome">
+							</picture>
 							<figcaption>
 								<h3>{{trabalho.nome}}</h3>
 								<h5>{{trabalho.tipo}}</h5>
