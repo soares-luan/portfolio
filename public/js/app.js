@@ -51,3 +51,53 @@ var habilidades = new Vue({
 		})
 	}
 })
+
+var cursos = new Vue({
+	el: '#cursos',
+	data: {
+		cursos: []
+	},
+	created(){
+		var vm = this;
+		axios.get('/dashboard/cursos/')
+		.then(function (response) {
+			vm.cursos = response.data;
+		})
+		.catch(function (error) {
+
+			console.log('Erro! Não foi possível realizar a busca. ' + error);
+		})
+	}
+})
+
+
+var portfolio = new Vue({
+	el: '#portfolio',
+	data: {
+		trabalhos: []
+	},
+	methods:{
+		removeHifen(valor){
+			var tags = [];
+			var bruto = valor.split('-');
+			bruto.forEach(function(tag){
+				tags.push(tag.trim());
+			});
+
+
+			return tags.join(' ');
+		}
+	},
+	created(){
+		var vm = this;
+		axios.get('/dashboard/trabalhos/')
+		.then(function (response) {
+			vm.trabalhos = response.data;
+		})
+		.catch(function (error) {
+
+			console.log('Erro! Não foi possível realizar a busca. ' + error);
+		})
+	}
+})
+

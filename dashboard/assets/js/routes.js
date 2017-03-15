@@ -49,6 +49,34 @@
             controller:'AtividadeAddCtrl',
             templateUrl: 'templates/atividade/add.htm'
         })
+        .state('cursos', {
+            url: '/cursos/',
+            controller:'CursoIndexCtrl',
+            templateUrl: 'templates/cursos/index.htm'
+        }).state('cursos-edit', {
+            url: '/cursos/edit/:key',
+            controller:'CursoEditCtrl',
+            templateUrl: 'templates/cursos/add.htm'
+        })
+        .state('cursos-add', {
+            url: '/cursos/add/',
+            controller:'CursoAddCtrl',
+            templateUrl: 'templates/cursos/add.htm'
+        })
+        .state('trabalhos', {
+            url: '/trabalhos/',
+            controller:'TrabalhoIndexCtrl',
+            templateUrl: 'templates/trabalhos/index.htm'
+        }).state('trabalhos-edit', {
+            url: '/trabalhos/edit/:key',
+            controller:'TrabalhoEditCtrl',
+            templateUrl: 'templates/trabalhos/add.htm'
+        })
+        .state('trabalhos-add', {
+            url: '/trabalhos/add/',
+            controller:'TrabalhoAddCtrl',
+            templateUrl: 'templates/trabalhos/add.htm'
+        })
         .state('experiencias', {
             url: '/experiencias',
             templateUrl: 'templates/experiencias.htm'
