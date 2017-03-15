@@ -1,0 +1,5 @@
+node_modules
+fire
+mail.js
+*.log
+firebase.js
