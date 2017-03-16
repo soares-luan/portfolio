@@ -15,6 +15,9 @@ app.get('/',function(req,res,next){
 	res.sendFile(__dirname+'/public/index.html');
 })
 
+
+
+
 app.post('/contato',function(req,res,next){
 
 	var mailOptions = mail.setaOpcoes(req.body.name,req.body.email,req.body.message);

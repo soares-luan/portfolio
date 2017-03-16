@@ -27,8 +27,8 @@ app.get('/:key',function(req,res,next){
 
 app.put('/:id',function(req,res,next){
 
-	Sobre.findOneAndUpdate({_id:req.params.id},req.body.data).then(function(result) {
-		res.send(result);
+	Sobre.findOneAndUpdate({_id:req.params.id},req.body).then(function(result) {
+		res.send("OK");
 	}).catch(function (error) {
 		console.log('Erro!. ' + error);
 	});
