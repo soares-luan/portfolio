@@ -17,26 +17,62 @@
 
 	}
 
-	dashApp.controller('CursoEditCtrl', ['$scope','cursoService','$state','$stateParams', CursoEditCtrl]);
+	dashApp.controller('CursoEditCtrl', ['$scope','cursoService','$state','$stateParams','Upload', CursoEditCtrl]);
 
-	function CursoEditCtrl($scope,cursoService,$state,$stateParams ) {
+	function CursoEditCtrl($scope,cursoService,$state,$stateParams,Upload) {
 		cursoService.getOne($stateParams.key).then(function(data){
 			$scope.curso = data;	
 		});
-
-
-		$scope.salvar = function(){
-			cursoService.saveData($stateParams.key,$scope.curso).then(function(data){
-				window.history.back()
-			})
-		}
-
+// upload on file select or drop
+$scope.upload = function (file) {
+	if(file == null){
+		return;
 	}
+	Upload.upload({
+		url: '/upload',
+		data: {file: file}
+	}).then(function (resp) {
+		$scope.curso.diploma = resp.config.data.file.name;
+		console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+	}, function (resp) {
+		console.log('Error status: ' + resp.status);
+	}, function (evt) {
+		var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+		console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+	});
+};
 
-	dashApp.controller('CursoAddCtrl', ['$scope','cursoService','$state','$stateParams', CursoAddCtrl]);
+$scope.salvar = function(){
+	cursoService.saveData($stateParams.key,$scope.curso).then(function(data){
+		window.history.back()
+	})
+}
 
-	function CursoAddCtrl($scope,cursoService,$state,$stateParams ) {
-		
+}
+
+dashApp.controller('CursoAddCtrl', ['$scope','cursoService','$state','$stateParams','Upload', CursoAddCtrl]);
+
+function CursoAddCtrl($scope,cursoService,$state,$stateParams,Upload) {
+
+	$scope.curso = {};
+		// upload on file select or drop
+		$scope.upload = function (file) {
+			if(file == null){
+				return;
+			}
+			Upload.upload({
+				url: '/upload',
+				data: {file: file}
+			}).then(function (resp) {
+				$scope.curso.diploma = resp.config.data.file.name;
+				console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+			}, function (resp) {
+				console.log('Error status: ' + resp.status);
+			}, function (evt) {
+				var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+				console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+			});
+		};
 
 		$scope.salvar = function(){
 			cursoService.add($scope.curso).then(function(data){

@@ -7,11 +7,9 @@
 
 	<input name='nome' type="text" ng-model='habilidade.nome'>
 
-	<label for="img">
-		img
-	</label>
+	<input name='img' type="text" ng-readonly='true' ng-model='habilidade.imagem'>
 
-	<input name='img' type="text" ng-model='habilidade.imagem'>
+	<div class="button" ngf-select="upload($file)">Upload on file select</div>
 
 
 	<button ng-click='salvar()'>

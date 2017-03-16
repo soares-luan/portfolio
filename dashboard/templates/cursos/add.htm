@@ -22,7 +22,7 @@
 	<label for="diploma">
 		Diploma
 	</label>
-	<input name='diploma' type="text" ng-model='curso.diploma'>
+	<input name='diploma' type="text" ng-readonly='true' ng-model='curso.diploma'>
 	<br>
 
 	<label for="link">
@@ -38,6 +38,12 @@
 	<input name='fim' type="text" ng-model='curso.fim'>
 	<br>
 	
+
+	<input name='img' type="hidden" ng-model='curso.diploma'>
+
+
+	<div class="button" ngf-select="upload($file)">Upload on file select</div>
+
 
 	<button ng-click='salvar()'>
 		Salvar

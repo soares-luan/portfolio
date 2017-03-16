@@ -1,24 +1,24 @@
 <div >
 	
-	
-	<label for="nome">
-		Nome
-	</label>
+	<form name="form">
+		<label for="nome">
+			Nome
+		</label>
 
-	<input name='nome' type="text" ng-model='habilidade.nome'>
+		<input name='nome' type="text" ng-model='habilidade.nome'>
 
-	<label for="img">
+<!-- 	<label for="img">
 		img
 	</label>
+-->
 
-	<input name='img' type="text" ng-model='habilidade.imagem'>
-
-
-	<button ng-click='salvar()'>
-		Salvar
-	</button>
+<input name='img' type="text" ng-readonly='true' ng-model='habilidade.imagem'>
 
 
-	
+<div class="button" ngf-select="upload($file)">Upload on file select</div>
 
+<button ng-click='salvar()'>
+	Salvar
+</button>
+</form>
 </div>
