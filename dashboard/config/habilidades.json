@@ -1,0 +1,8 @@
+{"_id":{"$oid":"58c9b1ee6c8f06ca9499e6c2"},"imagem":"js.png","nome":"JS"}
+{"_id":{"$oid":"58c9b1f66c8f06ca9499e6c6"},"imagem":"nodejs.png","nome":"nodejs"}
+{"_id":{"$oid":"58c9b1fb6c8f06ca9499e6c8"},"imagem":"mysql.png","nome":"mysql"}
+{"_id":{"$oid":"58c9b2016c8f06ca9499e6ca"},"imagem":"angular.png","nome":"angular"}
+{"_id":{"$oid":"58c9b2066c8f06ca9499e6cc"},"imagem":"express.png","nome":"express"}
+{"_id":{"$oid":"58c9b20c6c8f06ca9499e6ce"},"imagem":"AWS.png","nome":"AWS"}
+{"_id":{"$oid":"58c9b2116c8f06ca9499e6d0"},"imagem":"firebase.png","nome":"firebase"}
+{"_id":{"$oid":"58c9b2156c8f06ca9499e6d2"},"imagem":"mongo.png","nome":"mongo"}

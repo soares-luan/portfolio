@@ -1,8 +1,9 @@
+process.env.NODE_ENV = 'production';
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mail = require('./mail');
-var dashboard = require('./routes/dashboard');
+var dashboard = require('./dashboard/index');
 
 
 app.use('/assets',express.static(__dirname+'/public'));

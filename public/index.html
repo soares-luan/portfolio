@@ -15,10 +15,8 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/littleSnipet.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/slideshow.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/fallback.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/jquery-ui-1.8.16.custom.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/lightbox.min.css">
+
+
 
 <!--google font style-->
 <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'> -->
@@ -126,9 +124,7 @@
 				<div class="heading">
 					<h2>Habilidades técnicas</h2>
 				</div>
-				<div class=" col-xs-12 col-sm-12 col-md-3 col-lg-3" v-for='habilidade in habilidades'>
-					<img v-bind:src="'/assets/images/'+habilidade.imagem" v-bind:alt="habilidade.nome">
-				</div>
+				<habilidade :habilidade="habilidade" :key="habilidade._id" v-for='habilidade in habilidades'></habilidade>
 			</div>
 		</section>
 		<!--technical end-->
@@ -138,239 +134,209 @@
 				<div class="heading">
 					<h2>Atividades Profissionais</h2>
 				</div>
+				<atividade :atividade="atividade" :key="atividade._id" v-for='atividade in atividades'></atividade>
 
-				<div class="row workDetails" v-for='atividade in atividades'>
-					{{atividade}}
-					<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-						<div class="workYear"><span>{{atividade.inicio}}</span><br>
-							<span >{{atividade.fim}}</span></div>
-						</div>
-						<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-							<div class="arrowpart"></div>
-							<div class="exCon">
-								<h4 >{{atividade.titulo}}</h4>
-								<h5 >{{atividade.cargo}}</h5>
-								<p >{{atividade.atividade}}</p>
-							</div>
-						</div>
-					</div>
-
-					
-				</div>
-			</section>
-			<!--exprience end-->
-			<!--education start-->
-			<section class="education" id="education">
-				<div class="container" id='cursos'>
-					<div class="heading">
-						<h2>Educação, Diplomas e Certificados</h2>
-						<p>O que eu fiz em minha carreira acadêmica</p>
-					</div>
-
-					<div class="row workDetails" v-for='curso in cursos'>
-						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-							<div class="workYear">{{curso.fim}}</div>
-						</div>
-						<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-							<div class="arrowpart"></div>
-							<div class="exCon">
-
-								<h4>{{curso.titulo}}</h4>
-								<h5>{{curso.emissor}}</h5>
-								<p>{{curso.descricao}}</p>
-
-								<a v-if='curso.diploma != null' v-bind:href='curso.link' target='_new'><img v-bind:src="'assets/images/'+curso.diploma" style='width:150px'></img></a>
-
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!--education end-->
-			<!--protfolio start-->
-
-			<section class="protfolio" id="protfolio">
-				<div class="container" id='portfolio'>
-					<div class="heading">
-						<h2>Portfolio</h2>
-						<p>Meu últimos trabalhos</p>
-					</div>			
-					<div v-bind:class="'col-xs-12 col-xs-13 col-md-3 col-lg-3 '+ removeHifen(trabalho.tipo)" v-for='trabalho in trabalhos'>
-						<figure class="snip1579">
-							<picture>
-								<source 
-								media="(max-width: 414px)"
-								v-bind:srcset="'/assets/images/portfolio/celular_'+trabalho.img">
-								<img 
-								v-bind:src="'/assets/images/portfolio/'+trabalho.img"
-								v-bind:alt="trabalho.nome">
-							</picture>
-							<figcaption>
-								<h3>{{trabalho.nome}}</h3>
-								<h5>{{trabalho.tipo}}</h5>
-							</figcaption><a v-bind:href="trabalho.url" target='_new'></a>
-						</figure>
-
-					</div>
-
-
-				</section>			
-
-
-
-
-				<!--contact start-->
-				<section class="contact" id="contact">
-					<div class="container topCon">
-						<div class="heading">
-							<h2>Entre em contato</h2>
-							<p>Sinta-se livre em mandar uma mensagem.</p>
-						</div>
-					</div>
-
-				</section>
-				<section class="contactDetails">
-					<div class="container">
-						<!--contact info start-->
-						<div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
-							<h4>Detalhes de Contato</h4>
-							<!--Endereço-->
-							<!--  <p> <i class="fa fa-map-marker fa-lg"></i> Collins Street West Victoria 8007 Australia</p>  -->
-							<p> <i class="fa fa-mobile fa-lg"></i> <span itemprop="telephone">031 991518939</span></p>
-							<p> <i class="fa fa-envelope-o "></i> <a href="mailto:soares.luan92@gmail.com"><span  itemprop="email">soares.luan92@gmail.com</span></a></p>
-							<p> <i class="fa fa-link "></i> <a  href="www.luansoares.com.br">www.luansoares.com.br</a></p>
-							<p> <i class="fa fa-link "></i><a href='https://www.linkedin.com/profile/view?id=185354609&trk=nav_responsive_tab_profile' class='vermelho'>Linkedin</a></p>
-						</div>
-						<!--contact info end-->
-						<!--contact form start-->
-						<div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
-							<h4>Digite uma mensagem</h4>
-							<div id="retorno"></div>
-							<form action="javascript:;" id="contato" method="post" accept-charset="utf-8">
-
-								<div style="display:none;">
-									<input type="hidden" name="_method" value="POST">
-								</div> 
-								<div class="control-group text">
-									<div class="controls">
-										<input name="data[Contato][name]" id="name" placeholder="Seu nome..." class="col-xs-12 col-sm-6 col-md-6 col-lg-6" type="text">
-									</div>
-								</div> 
-								<div class="control-group text">
-									<div class="controls">
-										<input name="data[Contato][email]" id="email" placeholder="Seu email..." class="col-xs-12 col-sm-6 col-md-6 col-lg-6" type="text">
-									</div>
-								</div> 
-
-								<textarea name="message" id="message" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Sua mensagem..."></textarea>
-								<input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
-							</form>
-						</div>
-						<!--contact form end-->
-					</div>
-				</section>
-				<!--contact end-->
-				<!--footer start-->
-				<section class="footer" id="footer">
-					<div class="container">
-						Tecnologias utilizadas para criar esse portfolio: 
-
-						<a href="jquery.com" class="link">jQuery</a> - 
-						<a href="http://php.net" class="link">PHP</a>
-
-					</div>
-				</section>
-				<!--protfolio end-->
-
-				<!--footer end-->
 			</div>
+		</section>
+		<!--exprience end-->
+		<!--education start-->
+		<section class="education" id="education">
+			<div class="container" id='cursos'>
+				<div class="heading">
+					<h2>Educação, Diplomas e Certificados</h2>
+					<p>O que eu fiz em minha carreira acadêmica</p>
+				</div>
 
-			<strong>
-				<!--wrapper end-->
-				<!--modernizr js-->
+				<div class="row workDetails" :key="curso._id" v-for='curso in cursos'>
+					<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+						<div class="workYear">{{curso.fim}}</div>
+					</div>
+					<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+						<div class="arrowpart"></div>
+						<div class="exCon">
 
+							<h4>{{curso.titulo}}</h4>
+							<h5>{{curso.emissor}}</h5>
+							<p>{{curso.descricao}}</p>
 
-				<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-				<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
-				<script type="text/javascript" src="/assets/js/jquery.gridrotator.js"></script>
-				<script type="text/javascript" src="/assets/js/custom.js"></script>
-				<script type="text/javascript" src="/assets/js/stickUp.js"></script>
-				<script type="text/javascript" src="/assets/js/jquery.isotope.js"></script>
-				<script type="text/javascript" src="/assets/js/jquery.ui.widget.min.js"></script>
-				<script type="text/javascript" src="/assets/js/jquery.ui.rlightbox.js"></script>
-				<script src="https://unpkg.com/vue"></script>
-				<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
-				<script type="text/javascript" src='/assets/js/app.js'></script>
+							<a v-if='curso.diploma != null' v-bind:href='curso.link' target='_new'><img v-bind:src="'assets/images/'+curso.diploma" style='width:150px'></img></a>
 
+						</div>
+					</div>
+				</div>
 
-				<script type="text/javascript">
-				jQuery(function($) {
+			</div>
+		</section>
+		<!--education end-->
+		<!--protfolio start-->
 
-					$("#contato").on('submit',function(e){
-						e.preventDefault();
-						$("#retorno").hide().text('').css('color','red');
-						$("#submit").val('Enviando...');
-						$("#submit").attr('disabled',true);
-						var name = $("#name").val();
-						var email = $("#email").val();
-						var message = $("#message").val();
-						axios.post('/contato/',
-						{
-							name:name,
-							email:email,
-							message:message
-						})
-						.then(function (response) {
-							$("#retorno").show().text(response.data).css('color','red');
-							$("#submit").val('Enviar');
-							$("#submit").attr('disabled',false);
-							console.log(response.data);
-						})
-						.catch(function (error) {
-							$("#retorno").show().text(error).css('color','red');
-							console.log('Erro! Não foi possível realizar a busca. ' + error);
-						})
-					});
+		<section class="protfolio" id="protfolio">
+			<div class="container" id='portfolio'>
+				<div class="heading">
+					<h2>Portfolio</h2>
+					<p>Meu últimos trabalhos</p>
+				</div>			
 
-					$(document).ready( function() {
-
-						$('.navbar-wrapper').stickUp({
-							parts: {
-								0: 'banner',
-								1: 'aboutme',
-								2: 'technical',
-								3: 'exprience',
-								4: 'education',
-								5: 'protfolio',
-								6: 'contact'
-							},
-							itemClass: 'menuItem',
-							itemHover: 'active',
-							topMargin: 'auto'
-						});
-					});
-
-					$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
-						$( ".navbar-collapse" ).addClass( "hideClass" );
-					});
+				<portfolio :portfolio="trabalho" :key="trabalho._id" v-for='trabalho in trabalhos'></portfolio>
 
 
-					$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
-						$( ".navbar-collapse" ).addClass( "collapse" );
-					});
+			</section>			
 
 
-					$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
-						$( ".navbar-collapse" ).removeClass( "in" );
-					});
-
-					$( ".navbar-toggle" ).click(function() {
-						$( ".navbar-collapse" ).removeClass( "hideClass" );
-					});
 
 
+			<!--contact start-->
+			<section class="contact" id="contact">
+				<div class="container topCon">
+					<div class="heading">
+						<h2>Entre em contato</h2>
+						<p>Sinta-se livre em mandar uma mensagem.</p>
+					</div>
+				</div>
+
+			</section>
+			<section class="contactDetails">
+				<div class="container">
+					<!--contact info start-->
+					<div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
+						<h4>Detalhes de Contato</h4>
+						<!--Endereço-->
+						<!--  <p> <i class="fa fa-map-marker fa-lg"></i> Collins Street West Victoria 8007 Australia</p>  -->
+						<p> <i class="fa fa-mobile fa-lg"></i> <span itemprop="telephone">031 991518939</span></p>
+						<p> <i class="fa fa-envelope-o "></i> <a href="mailto:soares.luan92@gmail.com"><span  itemprop="email">soares.luan92@gmail.com</span></a></p>
+						<p> <i class="fa fa-link "></i> <a  href="www.luansoares.com.br">www.luansoares.com.br</a></p>
+						<p> <i class="fa fa-link "></i><a href='https://www.linkedin.com/profile/view?id=185354609&trk=nav_responsive_tab_profile' class='vermelho'>Linkedin</a></p>
+					</div>
+					<!--contact info end-->
+					<!--contact form start-->
+					<div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
+						<h4>Digite uma mensagem</h4>
+						<div id="retorno"></div>
+						<form action="javascript:;" id="contato" method="post" accept-charset="utf-8">
+
+							<div style="display:none;">
+								<input type="hidden" name="_method" value="POST">
+							</div> 
+							<div class="control-group text">
+								<div class="controls">
+									<input name="data[Contato][name]" id="name" placeholder="Seu nome..." class="col-xs-12 col-sm-6 col-md-6 col-lg-6" type="text">
+								</div>
+							</div> 
+							<div class="control-group text">
+								<div class="controls">
+									<input name="data[Contato][email]" id="email" placeholder="Seu email..." class="col-xs-12 col-sm-6 col-md-6 col-lg-6" type="text">
+								</div>
+							</div> 
+
+							<textarea name="message" id="message" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Sua mensagem..."></textarea>
+							<input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
+						</form>
+					</div>
+					<!--contact form end-->
+				</div>
+			</section>
+			<!--contact end-->
+			<!--footer start-->
+			<section class="footer" id="footer">
+				<div class="container">
+					Tecnologias utilizadas para criar esse portfolio: 
+
+					<a href="http://vuejs.org" class="link">VueJS</a> - 
+					<a href="http://nodejs.org" class="link">NodeJS</a> - 
+					<a href="https://www.mongodb.com" class="link">MongoDB</a>
+
+				</div>
+			</section>
+			<!--protfolio end-->
+
+			<!--footer end-->
+		</div>
+
+		<strong>
+			<!--wrapper end-->
+			<!--modernizr js-->
+
+
+			<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+			<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+			<script type="text/javascript" src="/assets/js/jquery.gridrotator.js"></script>
+			<script type="text/javascript" src="/assets/js/custom.js"></script>
+			<script type="text/javascript" src="/assets/js/stickUp.js"></script>
+			<script type="text/javascript" src="/assets/js/jquery.isotope.js"></script>
+			<script type="text/javascript" src="/assets/js/jquery.ui.widget.min.js"></script>
+			<script type="text/javascript" src="/assets/js/jquery.ui.rlightbox.js"></script>
+			<script type="text/javascript" src='/assets/js/vue.min.js'></script>
+			<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+			<script type="text/javascript" src='/assets/js/app.js'></script>
+
+
+			<script type="text/javascript">
+			jQuery(function($) {
+
+				$("#contato").on('submit',function(e){
+					e.preventDefault();
+					$("#retorno").hide().text('').css('color','red');
+					$("#submit").val('Enviando...');
+					$("#submit").attr('disabled',true);
+					var name = $("#name").val();
+					var email = $("#email").val();
+					var message = $("#message").val();
+					axios.post('/contato/',
+					{
+						name:name,
+						email:email,
+						message:message
+					})
+					.then(function (response) {
+						$("#retorno").show().text(response.data).css('color','red');
+						$("#submit").val('Enviar');
+						$("#submit").attr('disabled',false);
+						console.log(response.data);
+					})
+					.catch(function (error) {
+						$("#retorno").show().text(error).css('color','red');
+						console.log('Erro! Não foi possível realizar a busca. ' + error);
+					})
 				});
+
+				$(document).ready( function() {
+
+					$('.navbar-wrapper').stickUp({
+						parts: {
+							0: 'banner',
+							1: 'aboutme',
+							2: 'technical',
+							3: 'exprience',
+							4: 'education',
+							5: 'protfolio',
+							6: 'contact'
+						},
+						itemClass: 'menuItem',
+						itemHover: 'active',
+						topMargin: 'auto'
+					});
+				});
+
+				$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+					$( ".navbar-collapse" ).addClass( "hideClass" );
+				});
+
+
+				$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+					$( ".navbar-collapse" ).addClass( "collapse" );
+				});
+
+
+				$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+					$( ".navbar-collapse" ).removeClass( "in" );
+				});
+
+				$( ".navbar-toggle" ).click(function() {
+					$( ".navbar-collapse" ).removeClass( "hideClass" );
+				});
+
+
+			});
 </script>
 <!--for portfoli filter jquary-->
 

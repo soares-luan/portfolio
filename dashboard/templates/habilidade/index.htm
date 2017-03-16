@@ -1,7 +1,7 @@
 <button ng-click="changeState('add')">Adicionar</button>
 <div class="list-group">
 	
-	<a ng-click="changeState('edit',key)" class="list-group-item" ng-repeat='(key,habilidade) in habilidades'>
+	<a ng-click="changeState('edit',habilidade._id)" class="list-group-item" ng-repeat='habilidade in habilidades'>
 		{{habilidade.nome}}
 	</a>
 </div>

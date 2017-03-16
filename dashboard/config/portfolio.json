@@ -1,0 +1,158 @@
+{
+  "Atividades" : {
+    "-KfFJE_HF49KNBkab26k" : {
+      "atividade" : "Meu primeiro contato com banco de dados fora do colégio(já havia formado), onde além de ser responsável por corrigir falhas nos bancos dos clientes, atráves de procedures/triggers/CRUD, eu também criava pequenos projetos em PHP para empresas como a PORT Informática e PUR - equipamentos industriais",
+      "cargo" : "Analista de Banco de Dados",
+      "fim" : "Fev, 2013",
+      "inicio" : "Abril,2011",
+      "titulo" : "Emdesa Software"
+      },
+      "-KfFJJFy5s3JlyFD65ik" : {
+        "atividade" : "Meu primeiro estágio, tinha como foco atender alunos nos laboratórios, configuração de redes e manutenção. Ainda estava cursando o Cotemig e finalizei a carga horária necessária para adquirir o diploma de técnico.",
+        "cargo" : "Estágio em suporte",
+        "fim" : "Jun,2010",
+        "inicio" : "Mar,2010",
+        "titulo" : "Faculdade Newton Paiva"
+        },
+        "asdasdklj" : {
+          "atividade" : "Fui o responsável pela criação de sistemas de CMS para diversos clientes, criamos também sistemas de acordo com a demanda. Estive a frente do projeto Thinkbeer, sendo o criador de diversas funcionalidades utilizadas nele, como um sistema de BI para sugestões de cervejas.",
+          "cargo" : "Desenvolvimento PHP",
+          "fim" : "Out, 2016",
+          "inicio" : "Out, 2014",
+          "titulo" : "Part Comunicações"
+        }
+        },
+        "Cursos" : {
+          "-KfHc56ywltTAMt106Uu" : {
+            "descricao" : "Concluido no dia 13 de março, com foco em entender a fundo o funcionamento do NodeJS, V8, Express, a Stack Mean e conceitos base do JS.",
+            "diploma" : "learn_and_understand.jpg",
+            "emissor" : "Udemy",
+            "fim" : "Março, 2017",
+            "link" : "https://www.udemy.com/certificate/UC-TI9LQ6IO/",
+            "titulo" : "Certificado Learn And Understand NodeJS"
+            },
+            "-KfHcHJGLzQIoizxta22" : {
+              "descricao" : "Concluido no dia 5 de março, o curso abrange Node, Express, Jade e Backbone",
+              "diploma" : "advanced_node.jpg",
+              "emissor" : "Udemy",
+              "fim" : "Março, 2017",
+              "link" : "https://www.udemy.com/certificate/UC-Q6GXXDPA",
+              "titulo" : "Certificado Advanced Node Development"
+              },
+              "-KfHcgW0HreFw161qJ2P" : {
+                "descricao" : "Formei com uma premiação de melhor projeto do módulo no 4º período, por um projeto de automação empresarial + gestão de recursos utilizados na empresa(Água e Luz).",
+                "emissor" : "Centro Universitário Una",
+                "fim" : "Dez, 2015",
+                "titulo" : "Graduação em Análise de Sistemas"
+                },
+                "-KfHd9j3Nl6eHwfWodek" : {
+                  "descricao" : "Primeiro contato profissional com informática, finalizei o curso recebendo junto ao meu grupo uma premiação de inovação tecnológica pelo nosso PCC(Projeto de conclusão de Curso)",
+                  "emissor" : "Colégio Cotemig",
+                  "fim" : "Dez,2010",
+                  "titulo" : "Diploma de técnico em informática"
+                }
+                },
+                "Habilidades" : {
+                  "-KfF9J4JX1d8SCg5mR2b" : {
+                    "imagem" : "js.png",
+                    "nome" : "JS"
+                    },
+                    "-KfFGs2xGZcSJMZBDnRq" : {
+                      "imagem" : "nodejs.png",
+                      "nome" : "nodejs"
+                      },
+                      "-KfFGuRl7B5Li3n8BeEN" : {
+                        "imagem" : "mysql.png",
+                        "nome" : "mysql"
+                        },
+                        "-KfFGwmkGr10IEPkLz5Y" : {
+                          "imagem" : "angular.png",
+                          "nome" : "angular"
+                          },
+                          "-KfFGz7tPQk5LIFBZdfN" : {
+                            "imagem" : "express.png",
+                            "nome" : "express"
+                            },
+                            "-KfIJSYf7MO9KoVsVieX" : {
+                              "imagem" : "AWS.png",
+                              "nome" : "AWS"
+                              },
+                              "-KfIYfdamn4rqeaf9F6O" : {
+                                "imagem" : "firebase.png",
+                                "nome" : "firebase"
+                                },
+                                "09123uhasdd901" : {
+                                  "imagem" : "mongo.png",
+                                  "nome" : "mongo"
+                                }
+                                },
+                                "Portfolio" : {
+                                  "-KfHlL4zY47Hzx5HjHpA" : {
+                                    "img" : "batista.png",
+                                    "nome" : "Batista",
+                                    "tipo" : "site - sistema",
+                                    "url" : "http://sistemabatista.edu.br/inscricoes/"
+                                    },
+                                    "-KfHm-j-V9o0_QYN1o_1" : {
+                                      "img" : "portfolio.png",
+                                      "nome" : "Portfólio",
+                                      "tipo" : "site - sistema",
+                                      "url" : "http://www.luansoares.com.br"
+                                      },
+                                      "-KfHm6sQxsmnAzNB8XqR" : {
+                                        "img" : "brejaria.png",
+                                        "nome" : "Brejaria",
+                                        "tipo" : "site - sistema",
+                                        "url" : "http://www.luansoares.com.br/brejas"
+                                        },
+                                        "-KfHmOtin8gsrA3PJi5U" : {
+                                          "img" : "malhacao.png",
+                                          "nome" : "Acad. Malhação",
+                                          "tipo" : "site",
+                                          "url" : "http://academiamalhacao.com.br/site"
+                                          },
+                                          "-KfHmZA7VWRRY4AZYMX8" : {
+                                            "img" : "cori.png",
+                                            "nome" : "Corimg",
+                                            "tipo" : "site - cms",
+                                            "url" : "http://corimg.org"
+                                            },
+                                            "-KfHmtUNR6OkOI0oC_9F" : {
+                                              "img" : "irib.png",
+                                              "nome" : "Irib",
+                                              "tipo" : "site - sistema",
+                                              "url" : "http://irib.org.br"
+                                              },
+                                              "-KfHn83JEqlH1ku7zqPt" : {
+                                                "img" : "mdm.png",
+                                                "nome" : "Mundo Do Malte",
+                                                "tipo" : "site - eccomerce",
+                                                "url" : "http://mundodomalte.com.br"
+                                                },
+                                                "-KfHnCIg5jl4o2qUpYa4" : {
+                                                  "img" : "shopin.png",
+                                                  "nome" : "Shopincar",
+                                                  "tipo" : "site - sistema",
+                                                  "url" : "http://shopincar.com.br/"
+                                                  },
+                                                  "-KfHnH1uGIGf8LYhwCre" : {
+                                                    "img" : "thinkbeer.png",
+                                                    "nome" : "Thinkbeer",
+                                                    "tipo" : "site - sistema",
+                                                    "url" : "http://thinkbeer.com.br"
+                                                    },
+                                                    "-ZZas2831jd" : {
+                                                      "img" : "ohana.png",
+                                                      "nome" : "Ohana",
+                                                      "tipo" : "app - android",
+                                                      "url" : "https://play.google.com/store/apps/details?id=br.com.luansoares.cpbr"
+                                                      },
+                                                      "asdasd123" : {
+                                                        "img" : "wals.png",
+                                                        "nome" : "Wals",
+                                                        "tipo" : "site",
+                                                        "url" : "http://wals.com.br"
+                                                      }
+                                                      },
+                                                      "Sobre" : "            <h4 class=\"subHeading\">Analísta de Sistemas</h4>            <p>-Minha <strong>curiosidade</strong> serve de combustível para minhas pesquisas.</p>           <p>-Uma das minhas maiores qualidades é a <strong>empatia</strong>, tornando mais fácil <strong>encontrar soluções</strong> para os atores envolvidos nos casos de uso.</p>           <p>-No colégio técnico meu grupo de TCC recebeu o prêmio de inovação tecnológica em 2010. <a target=\"_new\" style=\"color: hsl(31, 100%, 50%);text-decoration: underline;\" href=\"https://twitter.com/Tecnofeira/status/8659354605592576\">Citação no Twitter</a></p>            <p>-Meu grupo ganhou como <strong>melhor projeto do curso</strong> de análise de sistemas na 'expôuna' de 2º/2014. Clique <a href=\"http://www.una.br/noticias/analise-de-desenvolvimento-de-sistemas-campus-barro-preto-2381\" style=\"color: hsl(31, 100%, 50%);text-decoration: underline;\"><strong>aqui</strong></a> para conferir!</p>            <p>-Vencemos em 2016, na primeira Campus Party MG <a target=\"_new\" href=\"https://www.facebook.com/prodemge/posts/1320218281344425?pnref=story\" style=\"color: hsl(31, 100%, 50%);text-decoration: underline;\"><strong>um dos desafios da PRODEMGE</strong></a> com um protótipo que <a target=\"_new\" href=\"https://www.educacao.mg.gov.br/component/gmg/story/8453-educacao-implantara-diario-eletronico-em-2017\" style=\"color: hsl(31, 100%, 50%);text-decoration: underline;\"><strong>será implementado nos sistemas de educação em 2017</strong></a><strong>.</strong></p><strong>            <p>-Em 2017 no hackaton da ONU na Campus Party Brasil, nosso projeto ficou <strong>entre os 20 melhores de 50 inscritos</strong>. Entre os 20, <strong>ficamos entre os 3</strong> que já não eram startups em funcionamento no mercado e sim um projeto desenvolvido para o desafio. Isso só reforçou que <strong>nossa força esta na análise. </strong></p><strong>           </strong></strong>"
+                                                    }

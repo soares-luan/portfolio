@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var sobre = require('./sobre');
-var habilidades = require('./habilidades');
-var atividades = require('./atividades');
-var cursos = require('./cursos');
-var trabalhos = require('./trabalhos');
+var sobre = require('./routes/sobre');
+var habilidades = require('./routes/habilidades');
+var atividades = require('./routes/atividades');
+var cursos = require('./routes/cursos');
+var trabalhos = require('./routes/trabalhos');
 
 app.use('/assets',express.static(path.join(__dirname, '../dashboard/assets')));
 

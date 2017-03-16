@@ -1,0 +1,11 @@
+{"_id":{"$oid":"58c9b22c6c8f06ca9499e6d9"},"img":"batista.png","nome":"Batista","tipo":"site - sistema","url":"http://sistemabatista.edu.br/inscricoes/"}
+{"_id":{"$oid":"58c9b2316c8f06ca9499e6dd"},"img":"portfolio.png","nome":"Portfólio","tipo":"site - sistema","url":"http://www.luansoares.com.br"}
+{"_id":{"$oid":"58c9b2366c8f06ca9499e6df"},"img":"brejaria.png","nome":"Brejaria","tipo":"site - sistema","url":"http://www.luansoares.com.br/brejas"}
+{"_id":{"$oid":"58c9b23c6c8f06ca9499e6e1"},"img":"malhacao.png","nome":"Acad. Malhação","tipo":"site","url":"http://academiamalhacao.com.br/site"}
+{"_id":{"$oid":"58c9b2416c8f06ca9499e6e3"},"img":"cori.png","nome":"Corimg","tipo":"site - cms","url":"http://corimg.org"}
+{"_id":{"$oid":"58c9b2486c8f06ca9499e6e5"},"img":"irib.png","nome":"Irib","tipo":"site - sistema","url":"http://irib.org.br"}
+{"_id":{"$oid":"58c9b24e6c8f06ca9499e6e7"},"img":"mdm.png","nome":"Mundo Do Malte","tipo":"site - eccomerce","url":"http://mundodomalte.com.br"}
+{"_id":{"$oid":"58c9b2536c8f06ca9499e6e9"},"img":"shopin.png","nome":"Shopincar","tipo":"site - sistema","url":"http://shopincar.com.br/"}
+{"_id":{"$oid":"58c9b2596c8f06ca9499e6eb"},"img":"thinkbeer.png","nome":"Thinkbeer","tipo":"site - sistema","url":"http://thinkbeer.com.br"}
+{"_id":{"$oid":"58c9b25f6c8f06ca9499e6ed"},"img":"ohana.png","nome":"Ohana","tipo":"app - android","url":"https://play.google.com/store/apps/details?id=br.com.luansoares.cpbr"}
+{"_id":{"$oid":"58c9b2646c8f06ca9499e6ef"},"img":"wals.png","nome":"Wals","tipo":"site","url":"http://wals.com.br"}
