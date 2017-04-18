@@ -45,7 +45,7 @@ passport.deserializeUser(function(obj, done) {
 
 // Simple route middleware to ensure user is authenticated.
 function ensureAuthenticated(req, res, next) {
-	return next(); //gambs para não ter q logar toda hora
+	// return next(); //gambs para não ter q logar toda hora
 	if (req.isAuthenticated()) { return next(); }
 	req.session.error = 'Please sign in!';
 	res.redirect('/dashboard/login');
@@ -70,12 +70,8 @@ app.post('/login', passport.authenticate('local', {
 
 //logs user out of site, deleting them from the session, and returns to homepage
 app.get('/logout', function(req, res){
-	// console.log(req.user);
-	var name = req.user.username;
-	// console.log("LOGGIN OUT " + req.user.username)
 	req.logout();
 	res.redirect('/');
-	req.session.notice = "You have successfully been logged out " + name + "!";
 });
 
 

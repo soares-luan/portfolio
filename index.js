@@ -43,7 +43,7 @@ app.post('/upload', multer({ dest: './public/images',storage: storage}).single('
               path: 'uploads/436ec561793aa4dc475a88e84776b1b9',
               size: 277056 }
               */
-              res.status(204).end();
+              res.status(202).end();
           });
 
 
